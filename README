@@ -1,0 +1,44 @@
+# Trip Planner Project
+
+![Alt text](image-1.png)
+
+## Description
+
+Le **Trip Planner Project** est une application dédiée à la planification de voyages, utilisant des outils d'intelligence artificielle pour générer des itinéraires personnalisés. Les utilisateurs fournissent leur lieu d'origine, les villes qu'ils souhaitent visiter, la période de voyage, et leurs centres d'intérêt. L'application utilise ces informations pour créer un itinéraire détaillé, incluant des recommandations pratiques pour chaque ville.
+
+## Technologies
+
+- **Python** : Langage de programmation utilisé pour le développement.
+- **Streamlit** : Framework pour créer une interface utilisateur interactive et conviviale.
+- **CrewAI** : Outil d'intelligence artificielle pour la gestion des tâches et des agents.
+
+## Installation
+
+Pour installer et configurer le projet, suivez les étapes ci-dessous :
+
+1. **Cloner le dépôt :**
+   ```bash
+   git clone https://github.com/yourusername/trip-planner.git
+
+2. **Naviguer vers le répertoire du projet ::**
+
+cd trip-planner
+
+3. **Créer un environnement virtuel :**
+
+Vous pouvez utiliser poetry pour gérer les dépendances. Si vous ne l'avez pas encore installé, vous pouvez l'installer en suivant les instructions sur le site de Poetry. Ensuite, créez l'environnement virtuel avec :
+
+
+poetry install
+
+4. **Configurer les variables d'environnement : :**
+Créez un fichier .env à la racine du projet et ajoutez vos clés d'API :
+
+OPENAI_API_KEY=your_openai_api_key
+SERPER_API_KEY=your_serper_api_key
+
+
+4. **Pour démarrer l'application, utilisez la commande suivante:**
+
+streamlit run app.py
+
