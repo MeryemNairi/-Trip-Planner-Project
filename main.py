@@ -69,28 +69,54 @@ def main():
     # Set page configuration
     st.set_page_config(page_title="Trip Planner", page_icon="🌍", layout="wide")
 
-    # Apply custom CSS
+    # Apply custom CSS for styling
     st.markdown("""
         <style>
         .reportview-container {
-            background: #f0f8ff;
+            background: #f5f7fa;
         }
         .sidebar .sidebar-content {
             background: #e0f7fa;
+            padding-top: 20px;
         }
-        .css-18e3th9 {
+        .css-18e3th9, .css-1f6h6k5 {
             background: #00796b;
-            color: white;
-        }
-        .css-1f6h6k5 {
-            background: #004d40;
             color: white;
         }
         .css-1ki2jl0 {
             color: #004d40;
+            font-weight: bold;
+        }
+        .main-header {
+            font-size: 40px;
+            font-weight: bold;
+            color: #ffffff;
+            padding-top: 120px;
+        }
+        .sub-header {
+            font-size: 24px;
+            color: #ffffff;
+            padding-bottom: 20px;
         }
         </style>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+
+    # Display hero image with an overlay
+    st.markdown(f"""
+        <div style="background-image: url('https://1.bp.blogspot.com/-MKR_KsT5Xi0/WVTpYSjlbgI/AAAAAAAAH3A/ugV_L1jQ4jk1rJurmUnevmew8tlgkzoJwCK4BGAYYCw/s640/travel-022.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    height: 400px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;">
+            <div style="background: rgba(0, 0, 0, 0.4); padding: 20px; text-align: center;">
+                <h1 class="main-header">Plan Your Dream Trip</h1>
+                <p class="sub-header">Create your personalized travel itinerary effortlessly</p>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
 
     # Sidebar for navigation
     st.sidebar.title("Trip Planner")
@@ -98,10 +124,6 @@ def main():
     st.sidebar.write("## Plan Your Perfect Trip")
 
     # Main content
-    st.title("Welcome to Your Personalized Trip Planner")
-    st.write("### Create Your Ultimate Travel Itinerary")
-
-    # Input fields for travel details
     st.subheader("Travel Details")
     origin = st.text_input("Starting Location", "e.g., Paris, France")
     cities = st.text_input("Cities to Visit", "e.g., Rome, Barcelona, Athens")

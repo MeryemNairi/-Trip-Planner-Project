@@ -16,7 +16,7 @@ class TravelAgents:
                             including budget, packing suggestions, and safety tips"""),
             tools=[],  # Pas d'outils pour cet agent
             verbose=True,
-            llm=self.OpenAIGPT4,
+            llm=self.OpenAIGPT35,  # Remplacement ici
         )
 
     def city_selection_expert(self):
@@ -26,7 +26,7 @@ class TravelAgents:
             goal=dedent("""Select the best cities based on weather, season, prices, and traveler interests"""),
             tools=[],  # Pas d'outils pour cet agent
             verbose=True,
-            llm=self.OpenAIGPT4,
+            llm=self.OpenAIGPT35,  # Remplacement ici
         )
 
     def local_tour_guide(self):
@@ -36,5 +36,5 @@ class TravelAgents:
             goal=dedent("""Provide the BEST insights about the selected city"""),
             tools=[],  # Pas d'outils pour cet agent
             verbose=True,
-            llm=self.OpenAIGPT4,
+            llm=self.OpenAIGPT35,  # Remplacement ici
         )
